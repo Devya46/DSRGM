@@ -186,6 +186,80 @@ export default function HomePage() {
     { value: "24/7", label: "Real-time Data", icon: Sparkles },
   ];
 
+  // Ticker data with symbols
+  const tickerItems = [
+    {
+      symbol: "NIFTY 50",
+      symbolCode: "NIFTY",
+      price: "22,124.15",
+      change: "+0.85%",
+      changeType: "up",
+    },
+    {
+      symbol: "SENSEX",
+      symbolCode: "SENSEX",
+      price: "72,987.32",
+      change: "-0.12%",
+      changeType: "down",
+    },
+    {
+      symbol: "BANK NIFTY",
+      symbolCode: "BANKNIFTY",
+      price: "48,567.80",
+      change: "+1.25%",
+      changeType: "up",
+    },
+    {
+      symbol: "RELIANCE",
+      symbolCode: "RELIANCE",
+      price: "₹2,845.60",
+      change: "+2.35%",
+      changeType: "up",
+    },
+    {
+      symbol: "HDFC BANK",
+      symbolCode: "HDFCBANK",
+      price: "₹1,678.90",
+      change: "-0.45%",
+      changeType: "down",
+    },
+    {
+      symbol: "INFOSYS",
+      symbolCode: "INFY",
+      price: "₹1,564.20",
+      change: "+1.75%",
+      changeType: "up",
+    },
+    {
+      symbol: "HUL",
+      symbolCode: "HINDUNILVR",
+      price: "₹2,345.75",
+      change: "+0.92%",
+      changeType: "up",
+    },
+    {
+      symbol: "ITC",
+      symbolCode: "ITC",
+      price: "₹425.30",
+      change: "-0.33%",
+      changeType: "down",
+    },
+    {
+      symbol: "TCS",
+      symbolCode: "TCS",
+      price: "₹3,890.45",
+      change: "+0.67%",
+      changeType: "up",
+    },
+    {
+      symbol: "WIPRO",
+      symbolCode: "WIPRO",
+      price: "₹462.15",
+      change: "-0.28%",
+      changeType: "down",
+    },
+  ];
+
   return (
     <div
       className={`min-h-screen ${theme === "light" ? "bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20" : "bg-black"}`}
@@ -398,6 +472,80 @@ export default function HomePage() {
         </main>
       </div>
 
+      {/* Ticker Section - With symbols and pause on hover */}
+      <div className="w-full overflow-hidden border-y border-gray-200 dark:border-gray-800 bg-gradient-to-r from-blue-50/30 to-purple-50/30 dark:from-blue-950/10 dark:to-purple-950/10">
+        <div className="relative flex overflow-x-hidden py-3 group/ticker">
+          <div className="animate-marquee whitespace-nowrap flex group-hover/ticker:pause-animation">
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex items-center gap-6 px-4">
+                {tickerItems.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="inline-flex items-center gap-3 px-4 py-1.5 rounded-lg bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md"
+                  >
+                    {/* Symbol Code Badge */}
+                    <div className="flex flex-col items-start">
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">
+                        {item.symbolCode}
+                      </span>
+                      <span className="text-sm font-bold text-gray-800 dark:text-white">
+                        {item.symbol}
+                      </span>
+                    </div>
+
+                    {/* Separator */}
+                    <div className="w-px h-6 bg-gray-300 dark:bg-gray-700"></div>
+
+                    {/* Price */}
+                    <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      {item.price}
+                    </span>
+
+                    {/* Change with icon */}
+                    <div
+                      className={`flex items-center gap-1 ${item.changeType === "up" ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"}`}
+                    >
+                      {item.changeType === "up" ? (
+                        <svg
+                          className="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 15l7-7 7 7"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          className="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      )}
+                      <span className="text-sm font-semibold">
+                        {item.change}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Financial Data Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-24 pb-16">
@@ -526,7 +674,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Live Trading Chart Section - After Features, Before Indian Stocks */}
-          <motion.section
+          {/* <motion.section
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -537,7 +685,7 @@ export default function HomePage() {
                 : "bg-gradient-to-br from-gray-900 via-gray-900 to-purple-900/20 shadow-xl shadow-gray-800/30 border border-gray-800"
             }`}
           >
-            {/* Header with decorative elements */}
+            
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
               <div>
                 <div className="flex items-center gap-3 mb-2">
@@ -582,7 +730,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Chart Container with elegant styling */}
+            
             <div className="rounded-xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 shadow-2xl">
               <div
                 className="tradingview-widget-container"
@@ -616,7 +764,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Additional market insights strip */}
+            
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
               <div
                 className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium ${theme === "light" ? "bg-gray-100 text-gray-700" : "bg-gray-800 text-gray-300"}`}
@@ -643,7 +791,7 @@ export default function HomePage() {
                 FIN NIFTY
               </div>
             </div>
-          </motion.section>
+          </motion.section> */}
 
           {/* Section 1: Top Indian Stocks */}
           <IndianStocks />
@@ -689,6 +837,24 @@ export default function HomePage() {
         /* TradingView widget container styling */
         .tradingview-widget-container iframe {
           border-radius: 0.75rem;
+        }
+
+        /* Marquee animation for ticker */
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee {
+          animation: marquee 25s linear infinite;
+        }
+
+        /* Pause animation on hover */
+        .group:hover .animate-marquee {
+          animation-play-state: paused;
         }
       `}</style>
     </div>
