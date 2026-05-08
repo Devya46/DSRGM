@@ -72,7 +72,7 @@ export default function HomePage() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setWelcomeVisible(true);
-    }, 500);
+    }, 5);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -82,7 +82,7 @@ export default function HomePage() {
     if (welcomeVisible && titleIndex < titleText.length) {
       const timeout = setTimeout(() => {
         setTitleIndex((prev) => prev + 1);
-      }, 100);
+      }, 3);
 
       return () => clearTimeout(timeout);
     } else if (welcomeVisible) {
@@ -95,7 +95,7 @@ export default function HomePage() {
     if (titleDone && descIndex < descriptionText.length) {
       const timeout = setTimeout(() => {
         setDescIndex((prev) => prev + 1);
-      }, 50);
+      }, 2);
 
       return () => clearTimeout(timeout);
     } else if (titleDone) {
