@@ -77,7 +77,7 @@ function TradingViewWidget() {
       headerFontSize: "medium",
       autosize: true,
       width: "100%",
-      height: "58%",
+      height: "100%",
       noTimeScale: false,
       hideDateRanges: false,
       hideMarketStatus: false,
@@ -592,7 +592,7 @@ export default function AnalyticsPage() {
               <span>Live data from BSE/NSE</span>
             </div>
           </div>
-          <div className="bg-black/30 backdrop-blur-sm rounded-xl border border-white/10 p-4 overflow-hidden h-[900px]">
+          <div className="bg-black/30 backdrop-blur-sm rounded-xl border border-white/10 p-4 overflow-hidden h-[700px]">
             <MemoizedTradingViewWidget />
           </div>
         </motion.div>
