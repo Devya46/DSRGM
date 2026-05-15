@@ -117,9 +117,22 @@ export default function AboutPage() {
       .card-hover-effect:hover {
         transform: translateY(-8px) scale(1.02);
       }
+  
     `;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    useEffect(() => {
+      const style = document.createElement("style");
+
+      style.innerHTML = `
+    /* your animations */
+  `;
+
+      document.head.appendChild(style);
+
+      return () => {
+        document.head.removeChild(style);
+      };
+    }, []);
   }, []);
 
   // Expanded state for leadership cards
