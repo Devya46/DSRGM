@@ -22,9 +22,9 @@ import {
 
 // Image paths from public folder
 const heroBgImage = "/Retirement Planning.png";
-const compoundingImage = "/Retirement Planning.png";
-const expensesImage = "/Retirement Planning.png";
-const investmentOptionsImage = "/Retirement Planning.png";
+const compoundingImage = "/RI-4.jpg";
+const expensesImage = "/RI-2.jpg";
+const investmentOptionsImage = "/RI-3.png";
 
 export default function RetirementPlanningPage() {
   const { theme } = useTheme();

@@ -420,7 +420,7 @@ export default function LoansPage() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap justify-center gap-4">
                   <Link
                     href="/contact"
                     className={`px-5 py-2.5 rounded-lg font-medium ${
@@ -431,15 +431,6 @@ export default function LoansPage() {
                   >
                     Apply Now
                   </Link>
-                  <button
-                    className={`px-5 py-2.5 rounded-lg font-medium ${
-                      theme === "light"
-                        ? "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
-                        : "bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700"
-                    }`}
-                  >
-                    Download Brochure
-                  </button>
                 </div>
               </div>
             ))}

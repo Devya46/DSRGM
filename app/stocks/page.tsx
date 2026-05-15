@@ -1058,7 +1058,7 @@ export default function StocksPage() {
               className="flex flex-col sm:flex-row items-center gap-3"
             >
               <LastUpdatedTimer />
-              <div className="relative">
+              {/* <div className="relative">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -1068,7 +1068,7 @@ export default function StocksPage() {
                   <Info className="h-4 w-4" />
                   Refer & Earn
                 </motion.button>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

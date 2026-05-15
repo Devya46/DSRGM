@@ -23,13 +23,12 @@ import {
 } from "@heroicons/react/24/outline";
 
 // Image paths from public folder
-const heroBgImage = "/Digital Transformation in Financial Services.png";
+const heroBgImage = "/Finace-3.png";
 const digitalBankingImage = "/Digital Transformation in Financial Services.png";
-const digitalPaymentsImage =
-  "/Digital Transformation in Financial Services.png";
-const aiFinanceImage = "/Digital Transformation in Financial Services.png";
-const blockchainImage = "/Digital Transformation in Financial Services.png";
-const fintechImage = "/Digital Transformation in Financial Services.png";
+const digitalPaymentsImage = "/Finace-1.jpg";
+const aiFinanceImage = "/Finace-2.png";
+const blockchainImage = "/Blockchain.jpg";
+const fintechImage = "/Trend.png";
 
 export default function DigitalTransformationPage() {
   const { theme } = useTheme();

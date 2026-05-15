@@ -20,12 +20,11 @@ import {
 } from "@heroicons/react/24/outline";
 
 // Image paths from public folder
-const heroBgImage = "/The Impact of Global Events on Indian Markets.png";
-const federalReserveImage =
-  "/The Impact of Global Events on Indian Markets.png";
-const crudeOilImage = "/The Impact of Global Events on Indian Markets.png";
-const chinaImage = "/The Impact of Global Events on Indian Markets.png";
-const sectorsImage = "/The Impact of Global Events on Indian Markets.png";
+const heroBgImage = "/Global-1.png";
+const federalReserveImage = "/Global-2.jpg";
+const crudeOilImage = "/Global-3.jpg";
+const chinaImage = "/MF-3.jpg";
+const sectorsImage = "/Global-11.png";
 
 export default function GlobalEventsImpactPage() {
   const { theme } = useTheme();

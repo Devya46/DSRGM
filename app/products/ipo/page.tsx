@@ -38,21 +38,21 @@ export default function IPOPage() {
   const upcomingIPOs = [
     {
       name: "TechNova Solutions",
-      date: "Dec 15-18, 2024",
+      date: "Dec 15-18, 2026",
       priceBand: "₹1,450 - ₹1,520",
       lotSize: "10 Shares",
       type: "Mainboard",
     },
     {
       name: "GreenEnergy Ltd",
-      date: "Jan 5-8, 2025",
+      date: "Jan 5-8, 2027",
       priceBand: "₹780 - ₹820",
       lotSize: "15 Shares",
       type: "SME",
     },
     {
       name: "FinTech Global",
-      date: "Jan 20-22, 2025",
+      date: "Jan 20-22, 2027",
       priceBand: "₹2,100 - ₹2,200",
       lotSize: "6 Shares",
       type: "Mainboard",
@@ -64,13 +64,13 @@ export default function IPOPage() {
       name: "MediLife Pharma",
       subscription: "3.2x",
       priceBand: "₹450 - ₹475",
-      closeDate: "Dec 12, 2024",
+      closeDate: "Dec 12, 2026",
     },
     {
       name: "LogiChain Corp",
       subscription: "1.8x",
       priceBand: "₹620 - ₹650",
-      closeDate: "Dec 13, 2024",
+      closeDate: "Dec 13, 2026",
     },
   ];
 
@@ -429,14 +429,14 @@ export default function IPOPage() {
                     "Closes: ",
                     ipo.closeDate,
                   ),
-                  React.createElement(
-                    "button",
-                    {
-                      className:
-                        "px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-700 transition-colors",
-                    },
-                    "Apply Now",
-                  ),
+                  // React.createElement(
+                  //   "button",
+                  //   {
+                  //     className:
+                  //       "px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-700 transition-colors",
+                  //   },
+                  //   "Apply Now",
+                  // ),
                 ),
               ),
             ),
@@ -539,15 +539,23 @@ export default function IPOPage() {
                   ),
                 ),
                 React.createElement(
-                  "button",
+                  "a",
                   {
-                    className: `w-full mt-2 py-2 rounded-lg font-medium transition-all ${
-                      theme === "light"
-                        ? "bg-gray-100 text-purple-600 hover:bg-gray-200"
-                        : "bg-gray-700 text-purple-400 hover:bg-gray-600"
-                    }`,
+                    href: "/open-demat-account", // add your link here
+                    // rel: "noopener noreferrer",
+                    // className: "block",
                   },
-                  "Get Notification",
+                  React.createElement(
+                    "button",
+                    {
+                      className: `w-full mt-2 py-2 rounded-lg font-medium transition-all ${
+                        theme === "light"
+                          ? "bg-gray-100 text-purple-600 hover:bg-gray-200"
+                          : "bg-gray-700 text-purple-400 hover:bg-gray-600"
+                      }`,
+                    },
+                    "Get Notification",
+                  ),
                 ),
               ),
             ),

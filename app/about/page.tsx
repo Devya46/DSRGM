@@ -156,7 +156,7 @@ export default function AboutPage() {
 
       <main className="relative z-10">
         {/* Hero Section - Simplified Elegant */}
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-4">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-pink-500/10"></div>
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-400 rounded-full filter blur-[120px] opacity-20"></div>
@@ -221,7 +221,7 @@ export default function AboutPage() {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 z-10"></div>
                   <img
-                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmluYW5jaWFsJTIwcGxhbm5pbmd8ZW58MHx8MHx8fDA%3D"
+                    src="/about-2.png"
                     alt="DSR Group Team"
                     className="w-full h-[400px] object-cover"
                   />
@@ -363,7 +363,7 @@ export default function AboutPage() {
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 z-10"></div>
                     <img
-                      src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGdyb3VwJTIwd29ya3xlbnwwfHwwfHx8MA%3D%3D"
+                      src="about-3.png"
                       alt="Our Vision"
                       className="w-full h-[320px] object-cover"
                     />
@@ -447,7 +447,7 @@ export default function AboutPage() {
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-pink-500/30 z-10"></div>
                     <img
-                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
+                      src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGdyb3VwJTIwd29ya3xlbnwwfHwwfHx8MA%3D%3D"
                       alt="Our Mission"
                       className="w-full h-[320px] object-cover"
                     />
@@ -763,7 +763,7 @@ export default function AboutPage() {
 
                       {/* Social Links Overlay */}
                       <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <a
+                        {/* <a
                           href={leader.social.linkedin}
                           className="p-2 bg-white/20 backdrop-blur rounded-full hover:bg-white/30 transition"
                         >
@@ -774,7 +774,7 @@ export default function AboutPage() {
                           className="p-2 bg-white/20 backdrop-blur rounded-full hover:bg-white/30 transition"
                         >
                           <Twitter className="w-4 h-4 text-white" />
-                        </a>
+                        </a> */}
                       </div>
 
                       {/* Name Overlay */}
@@ -893,10 +893,10 @@ export default function AboutPage() {
                     Get in Touch
                   </Link>
                   <Link
-                    href="/services"
+                    href="/products/ipo"
                     className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
                   >
-                    Explore Services
+                    Explore More
                   </Link>
                 </div>
               </div>

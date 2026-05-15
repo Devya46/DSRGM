@@ -101,13 +101,12 @@ export default function FuturesOptionsPage() {
                   </div>
 
                   <div className="h-48 w-full mb-6">
-                    <LineChart
-                      className={`w-full h-full ${
-                        theme === "light"
-                          ? "text-indigo-500/20"
-                          : "text-indigo-400/20"
-                      }`}
+                    <img
+                      src="/Trend.png" // replace with your image path
+                      alt="Chart"
+                      className="w-full h-full object-cover rounded-xl"
                     />
+
                     <div className="mt-2 text-right text-sm">
                       <span
                         className={

@@ -24,7 +24,7 @@ const heroBgImage = "/Understanding Mutual Funds.png";
 const equityFundImage = "/MF-1.jpg";
 const debtFundImage = "/MF-2.jpg";
 const hybridFundImage = "/MF-3.jpg";
-const sipVsLumpSumImage = "/Understanding Mutual Funds.png";
+const sipVsLumpSumImage = "/MF-5.jpg";
 
 export default function MutualFundsGuidePage() {
   const { theme } = useTheme();

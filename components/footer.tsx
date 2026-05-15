@@ -81,13 +81,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
           {/* Company Info & Address - 4 columns */}
           <div className="md:col-span-4">
-            <Link href="/" className="inline-block mb-6 group">
+            <Link href="/" className="flex justify-center mb-6 group">
               <Image
-                src="/logo-removebg-preview.png"
+                src="/logo-1.jpg"
                 alt="DSR Group Logo"
                 width={140}
                 height={42}
-                className="h-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-auto transition-transform duration-300 group-hover:scale-105 rounded-lg"
               />
             </Link>
 
