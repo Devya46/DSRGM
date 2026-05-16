@@ -120,19 +120,10 @@ export default function AboutPage() {
   
     `;
     document.head.appendChild(style);
-    useEffect(() => {
-      const style = document.createElement("style");
 
-      style.innerHTML = `
-    /* your animations */
-  `;
-
-      document.head.appendChild(style);
-
-      return () => {
-        document.head.removeChild(style);
-      };
-    }, []);
+    return () => {
+      document.head.removeChild(style);
+    };
   }, []);
 
   // Expanded state for leadership cards
