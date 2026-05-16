@@ -1082,7 +1082,7 @@ export default function StocksPage() {
             displayMode="adaptive"
             isTransparent={theme !== "light"}
             showSymbolLogo={false}
-            width="100%"
+            // width="100%"
             locale="in"
           />
         </div>
